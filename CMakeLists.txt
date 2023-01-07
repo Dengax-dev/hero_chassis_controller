@@ -9,6 +9,7 @@ project(hero_chassis_controller)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  pluginlib
 )
 
 ## System dependencies are found with CMake's conventions
@@ -117,6 +118,19 @@ include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
 )
+
+# Declare cpp executables
+add_library(${PROJECT_NAME}
+        src/${PROJECT_NAME}.cpp
+        )
+
+add_dependencies(${PROJECT_NAME}
+        ${catkin_EXPORTED_TARGETS}
+        )
+
+target_link_libraries(${PROJECT_NAME}
+        ${catkin_LIBRARIES}
+        )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
