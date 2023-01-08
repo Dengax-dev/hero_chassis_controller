@@ -36,8 +36,7 @@ To build from source, clone the latest version from this repository into your ca
 using
 
 	cd catkin_workspace/src
-	git clone git@github.com:gdut-dynamic-x/simple_chassis_controller.git
-    # git clone https://github.com/gdut-dynamic-x/simple_chassis_controller.git
+    # git clone
 	cd ../
 	rosdep install --from-paths . --ignore-src
 	catkin build
@@ -46,7 +45,7 @@ using
 
 Run the simulation and controller with:
 
-	roslaunch simple_chassis_controller run_simulation_and_controller.launch
+	roslaunch hero_chassis_controller hero_chassis_controller.launch
 
 ## Config files
 
@@ -56,13 +55,9 @@ Config file config
 
 ## Launch files
 
-* **run_simulation_and_controller.launch:** Hero chassis only simulation and simple chassis controller
+* **hero_chassis_controller.launch:** 
 
 ## Bugs & Feature Requests
-
-Please report bugs and request features using
-the [Issue Tracker](https://github.com/gdut-dynamic-x/simple_chassis_controller/issues)
-.
 
 [ROS]: http://www.ros.org
 
